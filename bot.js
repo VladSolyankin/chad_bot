@@ -2,6 +2,13 @@ const TelegramBot = require("node-telegram-bot-api");
 const config = require("./config");
 const db = require("./db/db");
 const { loadLists } = require("./utils/loadLists");
+const express = require("express");
+
+const app = express();
+
+app.listen(8000, () => {
+  console.log("Сервер запущен на порту 8000");
+});
 
 // Импорт обработчиков команд
 const startHandler = require("./handlers/start");
